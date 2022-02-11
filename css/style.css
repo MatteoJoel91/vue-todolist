@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.logo{
+    max-width: 150px;
+}
+
+main .add_todo{
+    text-align: center;
+}
+
+.add_todo h3{
+    margin: 20px;
+}
+
+main .todo_list{
+    margin-top: 50px;
+}
+
+main .todo_list ul{
+    background-color: lightgrey;
+    padding: 20px;
+    list-style: none;
+    border-radius: 30px;
+}
+
+main .todo_list ul li{
+    padding: 10px;
+}
+
+.todo_list ul li i{
+    float: right;
+}
+
+.todo_list ul li:hover{
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.testo_sbarrato{
+    text-decoration: line-through;
+}
