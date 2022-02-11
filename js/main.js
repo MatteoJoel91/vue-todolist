@@ -27,7 +27,7 @@ const root = new Vue (
       
         methods: {
             addTodo(){
-                if (this.newtodos != '') {
+                if (this.newtodo != '') {
                     this.todos.push(
                         {
                             text: this.newtodo,
