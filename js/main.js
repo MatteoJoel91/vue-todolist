@@ -3,7 +3,6 @@ const root = new Vue (
         el: "#root",
         data: {
             newtodo: '',
-            done: false,
             todos: [
                 {
                     text: 'Studiare',
@@ -37,12 +36,12 @@ const root = new Vue (
                     this.newtodo = '';
                 }              
             },
-           removeTodo(indice){
-            this.todos.splice(indice, 1);
-           },
-           todoFatta(){
-            this.done = !this.done;
-           },        
+            removeTodo(indice){
+                this.todos.splice(indice, 1);
+            },
+            todoFatta(indice){
+                this.todos[indice].done = !this.todos[indice].done;
+            },        
         }
     }  
 );
