@@ -57,6 +57,6 @@ main .todo_list ul li{
     border-radius: 30px;
 }
 
-.todo_list ul li .testo_sbarrato{
+.testo_sbarrato{
     text-decoration: line-through;
 }
