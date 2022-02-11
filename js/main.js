@@ -27,13 +27,15 @@ const root = new Vue (
       
         methods: {
             addTodo(){
-                this.todos.push(
-                    {
-                        text: this.newtodo,
-                        done: false,
-                    }
-                );
-                this.newtodo = '';
+                if (this.newtodos != '') {
+                    this.todos.push(
+                        {
+                            text: this.newtodo,
+                            done: false,
+                        }
+                    );
+                    this.newtodo = '';
+                }              
             },
            removeTodo(indice){
             this.todos.splice(indice, 1);
