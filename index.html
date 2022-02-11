@@ -10,36 +10,46 @@
     
 </head>
 <body>
+    <!-- container con id per Vue -->
     <div class="container" id="root">
         
+        <!-- logo -->
         <header>
             <img class="logo" src="https://m.media-amazon.com/images/M/MV5BMTU4NDM2MDQ2N15BMl5BanBnXkFtZTcwODU3Mzg3OA@@._V1_.jpg">
         </header>
 
+        <!-- sezione centrale -->
         <main>
             <div class="add_todo">
                 <h3>Aggiundi una cosa da fare</h3>
-                <input v-on:keyup.enter="addTodo" type="text" v-model="newtodo">
+                <input placeholder="Inserisci una nuova To Do" v-on:keyup.enter="addTodo" type="text" v-model="newtodo">
                 <button v-on:click="addTodo">Aggiungi</button>
             </div>
 
+            <!-- lista todo -->
             <div class="todo_list">
-            <ul v-if="todos.length"> 
-                <li v-for="(todo, indice) in todos" v-on:click="todoFatta(indice)" :class="(todo.done == true) ? 'testo_sbarrato' : '' ">
-                    <span>{{todo.text}}</span>
-                    <i @click="removeTodo" class="fa-solid fa-xmark"></i>
-                </li>
-            </ul>
-            <div v-else>
+                <!-- se c'è qualcosa nella lista -->
+                <ul v-if="todos.length">
 
+                    <!-- v-for per ciclare gli oggetti dell'arrey -->
+                    <li v-for="(todo, indice) in todos">
+
+                        <!-- v-on al click dello span per eseguire la funzione di javascript 'todoFatta(indice)' -->
+                        <!-- (v-bind):class per attivare la classe 'testo_sbarrato' quando la condizione è True -->
+                        <span v-on:click="todoFatta(indice)" :class="(todo.done == true) ? 'testo_sbarrato' : '' ">{{todo.text}}</span>
+
+                        <!-- icona 'X' con evento di click per rimuovere una todo -->
+                        <i @click="removeTodo" class="fa-solid fa-xmark"></i>
+
+                    </li>
+                </ul>
+
+                <!-- se non c'è niente nella lista -->
+                <div class="vuoto" v-else>
+                    Non ci sono cose da fare!
+                </div>
             </div>
-        </div>
         </main>
-
-        
-
-        
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>

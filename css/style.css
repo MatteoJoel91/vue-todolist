@@ -60,3 +60,12 @@ main .todo_list ul li{
 .testo_sbarrato{
     text-decoration: line-through;
 }
+
+main .vuoto{
+    background-color: rgb(167, 176, 253);
+    color: white;
+    padding: 20px;
+    list-style: none;
+    border-radius: 30px;
+    text-align: center;
+}
