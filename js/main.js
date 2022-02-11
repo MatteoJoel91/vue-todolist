@@ -6,19 +6,19 @@ const root = new Vue (
             done: false,
             todos: [
                 {
-                    text: 'studiare',
+                    text: 'Studiare',
                     done: false,
                 },
                 {
-                    text: 'mangiare',
+                    text: 'Mangiare',
                     done: false,
                 },
                 {
-                    text: 'giocare',
+                    text: 'Giocare',
                     done: false,
                 },
                 {
-                    text: 'dormire',
+                    text: 'Dormire',
                     done: false,
                 },
             ]

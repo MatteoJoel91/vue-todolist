@@ -35,7 +35,8 @@ main .todo_list{
 }
 
 main .todo_list ul{
-    background-color: lightgrey;
+    background-color: rgb(167, 176, 253);
+    color: white;
     padding: 20px;
     list-style: none;
     border-radius: 30px;
@@ -50,12 +51,12 @@ main .todo_list ul li{
 }
 
 .todo_list ul li:hover{
-    background-color: brown;
-    color: white;
+    background-color: rgb(255, 242, 167);
+    color: black;
     cursor: pointer;
     border-radius: 30px;
 }
 
-.testo_sbarrato{
+.todo_list ul li .testo_sbarrato{
     text-decoration: line-through;
 }
